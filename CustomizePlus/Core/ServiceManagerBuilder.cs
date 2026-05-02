@@ -11,6 +11,8 @@ using CustomizePlus.Game.Events;
 using CustomizePlus.Game.Services;
 using CustomizePlus.Game.Services.GPose;
 using CustomizePlus.Game.Services.GPose.ExternalTools;
+using CustomizePlus.GameData.Data;
+using CustomizePlus.GameData.ReverseSearchDictionaries;
 using CustomizePlus.GameData.Services;
 using CustomizePlus.Interop.Ipc;
 using CustomizePlus.Profiles;
@@ -32,9 +34,12 @@ using OtterGui.Log;
 using OtterGui.Raii;
 using OtterGui.Services;
 using Penumbra.GameData.Actors;
+using Penumbra.GameData.Data;
+using Penumbra.GameData.DataContainers;
 using Penumbra.GameData.Interop;
 using Penumbra.GameData.Structs;
 using System.Collections.Generic;
+using LunaMainLogger = Luna.MainLogger;
 
 namespace CustomizePlus.Core;
 
@@ -43,6 +48,8 @@ public static class ServiceManagerBuilder
     public static ServiceManager CreateProvider(IDalamudPluginInterface pi, Logger logger)
     {
         EventWrapperBase.ChangeLogger(logger);
+
+        var lunaLogger = new LunaMainLogger();
 
         var services = new ServiceManager(logger)
             .AddExistingService(logger)
@@ -58,7 +65,8 @@ public static class ServiceManagerBuilder
             .AddInterop()
             .AddConfigServices()
             .AddDataLoaders()
-            .AddApi();
+            .AddApi()
+            .AddExistingService<Luna.LunaLogger>(lunaLogger);
 
         DalamudServices.AddServices(services, pi);
 
@@ -226,10 +234,26 @@ public static class ServiceManagerBuilder
     private static ServiceManager AddGameDataServices(this ServiceManager services)
     {
         services
+            .AddSingleton<DictWorld>()
+            .AddSingleton<DictMount>()
+            .AddSingleton<DictCompanion>()
+            .AddSingleton<DictOrnament>()
+            .AddSingleton<DictBNpc>()
+            .AddSingleton<DictBNpcNames>()
+            .AddSingleton<DictENpc>()
+            .AddSingleton<NameDicts>()
+            .AddSingleton<DictModelChara>()
+            .AddSingleton<ReverseSearchDictMount>()
+            .AddSingleton<ReverseSearchDictCompanion>()
+            .AddSingleton<ReverseSearchDictBNpc>()
+            .AddSingleton<ReverseSearchDictENpc>()
+            .AddSingleton<ReverseSearchDictOrnament>()
+            .AddSingleton<ReverseNameDicts>()
             .AddSingleton<ActorManager>()
             .AddSingleton<CutsceneService>()
             .AddSingleton<GameEventManager>()
             .AddSingleton(p => new CutsceneResolver(idx => (short)p.GetRequiredService<CutsceneService>().GetParentIndex(idx)))
+            .AddSingleton<ObjectManager>()
             .AddSingleton<ActorObjectManager>();
 
         return services;

@@ -1,13 +1,13 @@
 {
 	"Author": "Risa and Contributors",
-	"Name": "Customize+",
+	"Name": "Customize+_DEV",
 	"Punchline": "Customize your character beyond FFXIV's limitations.",
 	"Description": "A plugin that allows you to customize your character beyond FFXIV limitations by directly editing bone parameters.",
 	"InternalName": "CustomizePlus",
 	"ApplicableVersion": "any",
-	"AssemblyVersion": "2.0.0.0",
-	"DalamudApiLevel": 14,
-	"TestingDalamudApiLevel": 14,
+	"AssemblyVersion": "2.3.0.0",
+	"DalamudApiLevel": 15,
+	"TestingDalamudApiLevel": 15,
 	"Tags": [
 		"Anamnesis",
 		"Customization",

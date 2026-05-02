@@ -1,6 +1,6 @@
 ﻿using Dalamud.Plugin.Services;
 using Dalamud.Plugin;
-using OtterGui.Log;
+using Luna;
 using Penumbra.GameData.Data;
 using Penumbra.GameData.DataContainers.Bases;
 using Penumbra.GameData.Structs;
@@ -18,7 +18,7 @@ namespace CustomizePlus.GameData.ReverseSearchDictionaries.Bases;
 /// <param name="factory"> The factory function to create the data from. </param>
 public abstract class ReverseNameDictionary(
     IDalamudPluginInterface pluginInterface,
-    Logger log,
+    LunaLogger log,
     IDataManager gameData,
     string name,
     int version,

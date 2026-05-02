@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.31911.260
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11723.231 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CF55D1D-C5C5-4368-89D6-31D79EF6978C}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,6 +23,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Penumbra.String", "submodules\Penumbra.String\Penumbra.String.csproj", "{CB1DFB63-22D9-4E90-A8C1-A4F7CFEF7823}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommonsLite", "submodules\ECommonsLite\ECommonsLite\ECommonsLite.csproj", "{41F4BB08-FCFD-420F-AD18-ED9D7FB3251C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luna", "submodules\Luna\Luna\Luna.csproj", "{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImSharp", "submodules\Luna\ImSharp\ImSharp\ImSharp.csproj", "{BF23B299-FF8E-A986-E785-99F7AB48632F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,18 @@ Global
 		{41F4BB08-FCFD-420F-AD18-ED9D7FB3251C}.Release|x64.Build.0 = Release|x64
 		{41F4BB08-FCFD-420F-AD18-ED9D7FB3251C}.ReleaseValidate|x64.ActiveCfg = Release|x64
 		{41F4BB08-FCFD-420F-AD18-ED9D7FB3251C}.ReleaseValidate|x64.Build.0 = Release|x64
+		{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F}.Debug|x64.ActiveCfg = Debug|x64
+		{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F}.Debug|x64.Build.0 = Debug|x64
+		{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F}.Release|x64.ActiveCfg = Release|x64
+		{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F}.Release|x64.Build.0 = Release|x64
+		{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F}.ReleaseValidate|x64.ActiveCfg = Release|x64
+		{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F}.ReleaseValidate|x64.Build.0 = Release|x64
+		{BF23B299-FF8E-A986-E785-99F7AB48632F}.Debug|x64.ActiveCfg = Debug|x64
+		{BF23B299-FF8E-A986-E785-99F7AB48632F}.Debug|x64.Build.0 = Debug|x64
+		{BF23B299-FF8E-A986-E785-99F7AB48632F}.Release|x64.ActiveCfg = Release|x64
+		{BF23B299-FF8E-A986-E785-99F7AB48632F}.Release|x64.Build.0 = Release|x64
+		{BF23B299-FF8E-A986-E785-99F7AB48632F}.ReleaseValidate|x64.ActiveCfg = Release|x64
+		{BF23B299-FF8E-A986-E785-99F7AB48632F}.ReleaseValidate|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +99,8 @@ Global
 		{CC460943-1E07-4FA0-8B8C-67F0EF385290} = {121C2200-A844-44FD-85C4-22D6C7E35553}
 		{CB1DFB63-22D9-4E90-A8C1-A4F7CFEF7823} = {121C2200-A844-44FD-85C4-22D6C7E35553}
 		{41F4BB08-FCFD-420F-AD18-ED9D7FB3251C} = {121C2200-A844-44FD-85C4-22D6C7E35553}
+		{77DDA2DF-E233-8CB8-FD51-3A1F4A3D189F} = {121C2200-A844-44FD-85C4-22D6C7E35553}
+		{BF23B299-FF8E-A986-E785-99F7AB48632F} = {121C2200-A844-44FD-85C4-22D6C7E35553}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B17E85B1-5F60-4440-9F9A-3DDE877E8CDF}

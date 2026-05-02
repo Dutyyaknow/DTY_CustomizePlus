@@ -1,16 +1,16 @@
 ﻿using Dalamud.Plugin.Services;
 using Dalamud.Plugin;
-using OtterGui.Log;
 using Penumbra.GameData.Data;
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
 using CustomizePlus.GameData.ReverseSearchDictionaries.Bases;
 using Lumina.Excel.Sheets;
+using Luna;
 
 namespace CustomizePlus.GameData.ReverseSearchDictionaries;
 
 /// <summary> A dictionary that matches names to ornament ids. </summary>
-public sealed class ReverseSearchDictOrnament(IDalamudPluginInterface pluginInterface, Logger log, IDataManager gameData)
+public sealed class ReverseSearchDictOrnament(IDalamudPluginInterface pluginInterface, LunaLogger log, IDataManager gameData)
     : ReverseNameDictionary(pluginInterface, log, gameData, "ReverseSearchOrnaments", Penumbra.GameData.DataContainers.Version.DictOrnament, () => CreateOrnamentData(gameData))
 {
     /// <summary> Create the data. </summary>

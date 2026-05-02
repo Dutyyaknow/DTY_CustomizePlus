@@ -1,6 +1,6 @@
 ﻿using Dalamud.Plugin.Services;
 using Dalamud.Plugin;
-using OtterGui.Log;
+using Luna;
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
 using CustomizePlus.GameData.ReverseSearchDictionaries.Bases;
@@ -12,7 +12,7 @@ namespace CustomizePlus.GameData.ReverseSearchDictionaries;
 #pragma warning disable SeStringEvaluator
 
 /// <summary> A dictionary that matches names to battle npc ids. </summary>
-public sealed class ReverseSearchDictBNpc(IDalamudPluginInterface pluginInterface, Logger log, IDataManager gameData, ISeStringEvaluator evaluator)
+public sealed class ReverseSearchDictBNpc(IDalamudPluginInterface pluginInterface, LunaLogger log, IDataManager gameData, ISeStringEvaluator evaluator)
     : ReverseNameDictionary(pluginInterface, log, gameData, "ReverseSearchBNpcs", Penumbra.GameData.DataContainers.Version.DictBNpc, () => CreateBNpcData(gameData, evaluator))
 {
     /// <summary> Create the data. </summary>
