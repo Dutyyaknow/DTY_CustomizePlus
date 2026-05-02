@@ -1,4 +1,4 @@
-# Customize+
+# FORK of Customize+
 Customize+ is a Dalamud plugin designed to give you better control over your Final Fantasy XIV character appearance. Namely it allows you to apply character bone manipulations during gameplay.
 
 ## Installing
